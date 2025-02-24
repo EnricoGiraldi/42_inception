@@ -29,7 +29,7 @@ All services must be persistent, meaning data should not be lost after restartin
 bash
 Copia
 Modifica
-git clone https://github.com/your-username/inception.git
+git clone https://github.com/EnricoGiraldi/inception.git
 cd inception
 2️⃣ Create Required Directories
 bash
