@@ -1,0 +1,110 @@
+🏗️ Project Overview
+Inception is a Docker-based system administration project at 42 School. The goal is to create a containerized infrastructure where each service runs in its own Docker container, orchestrated with Docker Compose.
+
+By the end of the project, you will have a secure, scalable web server setup running multiple services inside containers.
+
+🎯 Objectives
+✅ Learn Docker and Docker Compose.
+✅ Set up a secure web server with TLS/SSL.
+✅ Deploy WordPress as a CMS inside a container.
+✅ Set up a MariaDB database for WordPress.
+✅ Implement data persistence using Docker volumes.
+✅ Separate services into isolated containers.
+
+📁 Project Structure
+Each service runs in its own container, defined in the docker-compose.yml file:
+
+Service	Description
+NGINX	Web server with SSL/TLS
+WordPress	CMS for website management
+MariaDB	Database for WordPress
+Redis	Cache for improving performance
+Adminer	Web interface to manage the database
+FTPS	Secure FTP server
+Bonus Services	Additional optional features
+All services must be persistent, meaning data should not be lost after restarting the containers.
+
+🛠️ Installation & Setup
+1️⃣ Clone the Repository
+bash
+Copia
+Modifica
+git clone https://github.com/your-username/inception.git
+cd inception
+2️⃣ Create Required Directories
+bash
+Copia
+Modifica
+mkdir -p ~/data/wordpress ~/data/mariadb
+3️⃣ Build & Run the Containers
+bash
+Copia
+Modifica
+docker-compose up --build -d
+4️⃣ Check Running Containers
+bash
+Copia
+Modifica
+docker ps
+5️⃣ Access WordPress
+Open your browser and go to:
+https://localhost
+
+⚙️ Useful Commands
+🔄 Restart Containers
+
+bash
+Copia
+Modifica
+docker-compose restart
+🛑 Stop All Containers
+
+bash
+Copia
+Modifica
+docker-compose down
+🧹 Remove All Unused Docker Objects
+
+bash
+Copia
+Modifica
+docker system prune -a
+✨ Bonus Features
+To earn extra points, you can implement:
+
+⭐ Redis caching for faster database queries.
+⭐ FTPS server for secure file transfers.
+⭐ Container log monitoring for debugging.
+
+🔐 Security & Best Practices
+📌 SSL/TLS Encryption: You must configure a certificate to secure the website.
+📌 Docker Volumes: Ensure correct volume setup to prevent data loss.
+📌 Permissions & Access Control: Secure database and CMS credentials properly.
+
+🎓 Learning Resources
+Docker Documentation
+Docker Compose Docs
+🚀 Final Thoughts
+The Inception project is a great hands-on experience in managing containers, handling web services, and implementing system administration best practices.
+
+If you have questions or need help, refer to Docker’s official documentation or ask your peers!
+
+📌 How to Upload this README to GitHub
+1️⃣ Create the README file in your repo:
+
+bash
+Copia
+Modifica
+touch README.md
+nano README.md
+(Paste the content, then save with CTRL + X, then Y and Enter.)
+
+2️⃣ Commit & Push to GitHub:
+
+bash
+Copia
+Modifica
+git add README.md
+git commit -m "Added detailed README for Inception project"
+git push origin main
+🎉 Your README is now live on GitHub! 🚀
